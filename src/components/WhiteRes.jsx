@@ -491,23 +491,7 @@ const WhiteRes = () => {
           </div>
         );
       })}
-      <div>
-        <h3>Your Answers:</h3>
-        {answers.map((answer, index) => {
-          const currentItem = formData.data[index];
-          // Only show the answer if it's not of type 'text' or 'image'
-          if (currentItem?.label !== "text" && currentItem?.label !== "image") {
-            return (
-              <div key={index}>
-                {currentItem?.label}: {answer}
-              </div>
-            );
-          }
-          return null; // Do not display anything for text or image labels
-        })}
-        {/* Display the visit count once outside of the map */}
-        <p>Number of visits: {visitCount}</p>
-      </div>
+     
     </div>
   );
 };
