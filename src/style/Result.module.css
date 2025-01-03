@@ -81,6 +81,7 @@ table, th, td {
 
   .content{
     display: flex;
+    margin-top: 20px;
     justify-content: center;
     align-items: center;
     height: 100vh;          /* Ensures the container takes up the full height of the viewport */
