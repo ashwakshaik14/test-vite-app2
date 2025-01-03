@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "../style/Settings.module.css";
+import style from "../style/settings.module.css";
 import man from "../assets/man.png";
 import lock from "../assets/lock.png";
 import logout from "../assets/Logout.png";
