@@ -292,7 +292,7 @@ function Result() {
   };
 
   const completionRate = formData
-    ? ((formData.fullFormSubmissions / formData.users.length) * 100).toFixed(2)
+    ? ((formData.fullFormSubmissions / formData.visitCount) * 100).toFixed(2)
     : 0;
 
     useEffect(() => {
