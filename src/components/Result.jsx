@@ -268,7 +268,7 @@ function Result() {
       {
         data: [
           formData?.fullFormSubmissions || 0,
-          (formData?.users?.length - formData?.fullFormSubmissions) || 0,
+          (formData?.users?.length - formData?.fullFormSubmissions)>0 ? (formData?.users?.length - formData?.fullFormSubmissions) : 0,
         ],
 
         backgroundColor: ["#3B82F6", "#909090"],
