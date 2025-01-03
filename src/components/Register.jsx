@@ -51,8 +51,8 @@ function Register() {
     setError(false);
   
     try {
-      const response = await fetch("https://test-vite-app1.onrender.com/register", {
-        method: "POST",
+      const response = await fetch("https://test-vite-app1.onrender.com/api/user/register", {
+      method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
