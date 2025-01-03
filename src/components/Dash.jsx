@@ -130,7 +130,7 @@ function Dash() {
         if (!userEmail) throw new Error("Email not found in localStorage");
 
         const response = await fetch(
-          `http://localhost:4444/api/user/details?email=${userEmail}`
+          `https://test-vite-app1.onrender.com/api/user/details?email=${userEmail}`
         );
         if (!response.ok) throw new Error("Failed to fetch user details");
 
@@ -156,7 +156,7 @@ function Dash() {
         if (!userEmail) throw new Error("Email not found in localStorage");
 
         const response = await fetch(
-          `http://localhost:4444/api/folders?email=${userEmail}`
+          `https://test-vite-app1.onrender.com/api/folders?email=${userEmail}`
         );
         if (!response.ok) throw new Error("Failed to fetch folders");
         const data = await response.json();
@@ -203,7 +203,7 @@ function Dash() {
     // { newForm = { name: formName, email: userEmail, workspaceName:workspaceName, folderId:folderId }; }
 
     try {
-      const response = await fetch("http://localhost:4444/api/forms", {
+      const response = await fetch("https://test-vite-app1.onrender.com/api/forms", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -236,7 +236,7 @@ function Dash() {
 
       try {
         const response = await fetch(
-          `http://localhost:4444/api/forms?email=${userEmail}&workspaceName=${workspaceName}`,
+          `https://test-vite-app1.onrender.com/api/forms?email=${userEmail}&workspaceName=${workspaceName}`,
           {
             headers: { Authorization: `${localStorage.getItem("token")}` },
           }
@@ -270,7 +270,7 @@ function Dash() {
     const requestBody = { name: folderName, email: userEmail, workspaceName };
 
     try {
-      const response = await fetch("http://localhost:4444/api/folders", {
+      const response = await fetch("https://test-vite-app1.onrender.com/api/folders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestBody),
@@ -306,7 +306,7 @@ function Dash() {
     setIsDeleting(true); // Set loading state
     try {
       const response = await fetch(
-        `http://localhost:4444/api/folders/${selectedFolderId}`,
+        `https://test-vite-app1.onrender.com/api/folders/${selectedFolderId}`,
         { method: "DELETE" }
       );
 
@@ -343,7 +343,7 @@ function Dash() {
     setIsDeletingForm(true); // Show deleting indicator
 
     try {
-      const response = await fetch(`http://localhost:4444/api/forms/${selectedFormId}`, {
+      const response = await fetch(`https://test-vite-app1.onrender.com/api/forms/${selectedFormId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`, // Replace with actual token

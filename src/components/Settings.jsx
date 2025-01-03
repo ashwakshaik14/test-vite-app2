@@ -43,7 +43,7 @@ const Settings = () => {
 
     try {
       const token = localStorage.getItem("authToken");
-      const response = await fetch("http://localhost:4444/api/user/update", {
+      const response = await fetch("https://test-vite-app1.onrender.com/api/user/update", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

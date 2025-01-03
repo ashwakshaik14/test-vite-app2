@@ -163,7 +163,7 @@ const WhiteRes = () => {
     const trackVisit = async () => {
       try {
         const response = await fetch(
-          `http://localhost:4444/api/track/view/${formId}`,
+          `https://test-vite-app1.onrender.com/api/track/view/${formId}`,
           {
             method: "POST",
             headers: {
@@ -196,7 +196,7 @@ const WhiteRes = () => {
       return;
     }
 
-    fetch(`http://localhost:4444/api/flow/get-form/${formId}`)
+    fetch(`https://test-vite-app1.onrender.com/api/flow/get-form/${formId}`)
       .then((response) => {
         if (!response.ok)
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -338,7 +338,7 @@ const WhiteRes = () => {
       return;
     }
     console.log(userId, fieldName, fieldValue);
-    fetch(`http://localhost:4444/api/track/field-submit/${formId}`, {
+    fetch(`https://test-vite-app1.onrender.com/api/track/field-submit/${formId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -379,7 +379,7 @@ const WhiteRes = () => {
     setAnswers(updatedAnswers);
 
     // Trigger the backend API call to increment the full form submission count
-    fetch(`http://localhost:4444/api/track/full-form-submit/${formId}`, {
+    fetch(`https://test-vite-app1.onrender.com/api/track/full-form-submit/${formId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
