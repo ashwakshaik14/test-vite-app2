@@ -205,7 +205,6 @@ import right2 from '../assets/right2.png';
 import { FcGoogle } from "react-icons/fc";
 import { IoArrowBack } from "react-icons/io5";
 import style from '../style/Lr.module.css';
-import { register } from '../services';
 
 
 function Register() {
@@ -239,47 +238,6 @@ function Register() {
     }
   };
 
-  // const handleRegi = async (e) => {
-  //   e.preventDefault();
-  
-  //   // Log formData before sending the request
-  //   console.log("Form Data:", formData);
-  
-  //   // Validate passwords match
-  //   if (formData.password !== formData.confirmPassword) {
-  //     setError(true);
-  //     return;
-  //   }
-  //   setError(false);
-  
-  //   try {
-  //     const response = await fetch("https://test-vite-app1.onrender.com/api/user/register", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({
-  //         name: formData.name, // Ensure `name` is passed correctly
-  //         email: formData.email,
-  //         password: formData.password,
-  //       }),
-  //     });
-  
-  //     const result = await response.json();
-  
-  //     if (response.ok) {
-  //       alert("Registered successfully");
-  //       navigate("/login"); // Optionally, navigate to the login page after successful registration
-  //     } else {
-  //       console.log("Error Response:", result);
-  //       alert(result.message || "Registration failed!");
-  //     }
-  //   } catch (err) {
-  //     console.error("Error during registration:", err);
-  //     alert("Registration failed!");
-  //   }
-  // };
-
   const handleRegi = async (e) => {
     e.preventDefault();
   
@@ -294,25 +252,67 @@ function Register() {
     setError(false);
   
     try {
-      const response = await register({
-        name: formData.name,  // Ensure `name` is passed correctly
-        email: formData.email,
-        password: formData.password,
+      const response = await fetch("https://test-vite-app1.onrender.com/api/user/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          password: formData.password,
+        }),
       });
+  
+      console.log("Response Status:", response.status); // Log status code for debugging
+      const result = await response.json();
   
       if (response.ok) {
         alert("Registered successfully");
-        navigate("/login");  // Optionally, navigate to the login page after successful registration
+        navigate("/login");
       } else {
-        const errorData = await response.json();
-        console.log("Error Response:", errorData);
-        alert(errorData.message || "Registration failed!");
+        // Log detailed error message from the server
+        console.log("Error Response:", result);
+        alert(result.message || "Registration failed!");
       }
     } catch (err) {
       console.error("Error during registration:", err);
       alert("Registration failed!");
     }
   };
+    // const handleRegi = async (e) => {
+  //   e.preventDefault();
+  
+  //   // Log formData before sending the request
+  //   console.log("Form Data:", formData);
+  
+  //   // Validate passwords match
+  //   if (formData.password !== formData.confirmPassword) {
+  //     setError(true);
+  //     return;
+  //   }
+  //   setError(false);
+  
+  //   try {
+  //     const response = await register({
+  //       name: formData.name,  // Ensure `name` is passed correctly
+  //       email: formData.email,
+  //       password: formData.password,
+  //     });
+  
+  //     if (response.ok) {
+  //       alert("Registered successfully");
+  //       navigate("/login");  // Optionally, navigate to the login page after successful registration
+  //     } else {
+  //       const errorData = await response.json();
+  //       console.log("Error Response:", errorData);
+  //       alert(errorData.message || "Registration failed!");
+  //     }
+  //   } catch (err) {
+  //     console.error("Error during registration:", err);
+  //     alert("Registration failed!");
+  //   }
+  // };
   
 
   // Function to navigate back to the previous page
