@@ -282,24 +282,24 @@ function Register() {
 
   const handleRegi = async (e) => {
     e.preventDefault();
-
+  
     // Log formData before sending the request
     console.log("Form Data:", formData);
-
+  
     // Validate passwords match
     if (formData.password !== formData.confirmPassword) {
       setError(true);
       return;
     }
     setError(false);
-
+  
     try {
       const response = await register({
         name: formData.name,  // Ensure `name` is passed correctly
         email: formData.email,
         password: formData.password,
       });
-
+  
       if (response.ok) {
         alert("Registered successfully");
         navigate("/login");  // Optionally, navigate to the login page after successful registration
