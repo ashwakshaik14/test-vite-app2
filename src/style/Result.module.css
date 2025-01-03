@@ -1,0 +1,232 @@
+html, body {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.684);
+    font-family: "Outfit", serif;
+
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+    background-color: inherit;
+    color: #ffffff;
+    position: relative;
+  }
+  
+  .navLine {
+    border: none;
+    border-top: 1px solid #cccccc58; /* Adjust color and thickness */
+    margin: 0px 0; /* Adjust margin as needed */
+  }
+
+.navLeft input{
+    background-color: rgba(255, 255, 255, 0.104);
+    border: none;
+    color: #ffffff;
+    padding: 4px 8px;
+}
+.navLeft::-webkit-input-placeholder{
+    padding-left: 20px;
+    color: white;
+    height: 10px;
+}
+
+.navMiddle{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navMiddle button{
+    padding: 6px 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--text-color);
+
+    cursor: pointer;
+}
+
+.navMiddle .Active{
+    padding: 6px 10px;
+    border: 1px solid #7EA6FF;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #7EA6FF;
+    cursor: pointer;
+}
+
+.navRight{
+
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+}
+
+.navRight button{
+    padding: 3px 18px;
+    border: none;
+    border-radius: 6px;
+}
+
+
+table, th, td {
+    border: 2px solid;
+    border-collapse: collapse;
+    padding: 10px;
+    width: 1200px;
+}
+
+  .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;          /* Ensures the container takes up the full height of the viewport */
+    width: 100vw;
+}
+
+.topper{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.zero {
+    display: flex;
+    align-items: center;  /* Vertically center items */
+    justify-content: space-evenly;  /* Align items to the left */
+    gap: 20px;  /* Space between the chart and the completion rate */
+  }
+  
+  /* Style for the completion rate */
+  .topper p {
+    padding: 15px 30px;
+    background-color: #ffffff2c;  /* Semi-transparent white background */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Ensure text is centered vertically */
+    /* Optionally, shift the completion rate to the left */
+    margin-left: -20px;  /* Adjust to move it slightly left */
+    color: var(--text-color);
+  }
+  .doughnutChart {
+    max-width: 250px;  /* Reduced size of the chart */
+    height: 300px;     /* Set a fixed height */
+    margin: 20px;      /* Center the chart horizontally with margin */
+  }
+
+  
+  
+.lightTheme {
+  --bg-color: #ffffff !important;
+  --text-color: #000000 !important;
+  --button-bg: #007bff !important;
+  --button-text: #ffffff !important;
+}
+
+/* Dark Theme */
+.darkTheme {
+  --bg-color: #121212 !important;
+  --text-color: #ffffff !important;
+  --button-bg: #555555 !important;
+  --button-text: #f0f0f0 !important;
+}
+
+.darkTheme p{
+  color: #fff;
+
+}
+
+.lightTheme p{
+
+  color: #000;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50; /* Green when toggled */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /* Move the slider when toggled */
+}
+
+
+
+.toggleSwitch {
+  width: 50px;
+  height: 25px;
+  background-color: var(--text-color);
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.switch {
+  width: 23px;
+  height: 23px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.switchOn {
+  transform: translateX(25px);
+  background-color: black; /* Color when switch is off */
+
+}
+
+.switchOff {
+  transform: translateX(0);
+  background-color: white; /* Color when switch is on */
+
+}

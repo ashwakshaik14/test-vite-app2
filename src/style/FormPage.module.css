@@ -1,0 +1,335 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit", serif;
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scrolling */
+
+/* Apply theme variables */
+/* Increase specificity */
+body.lightTheme {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+body.darkTheme {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+    background-color: inherit;
+    color: var(--text-color);
+    position: relative;
+  }
+  
+  .navLine {
+    border: none;
+    border-top: 1px solid #cccccc58; /* Adjust color and thickness */
+    margin: 0px 0; /* Adjust margin as needed */
+  }
+
+.navLeft input{
+    background-color: rgba(255, 255, 255, 0.104);
+    border: none;
+    color: #ffffff;
+    padding: 4px 8px;
+}
+.navLeft::-webkit-input-placeholder{
+    padding-left: 20px;
+    color: white;
+    height: 10px;
+}
+
+.navMiddle{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navMiddle button{
+    padding: 6px 10px;
+    border: 1px solid ;
+    border-radius: 6px;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.navMiddle .Active{
+    padding: 6px 10px;
+    border: 1px solid #7EA6FF;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #7EA6FF;
+    cursor: pointer;
+}
+
+.navRight{
+
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+}
+
+.navRight button{
+    padding: 3px 18px;
+    border: none;
+    border-radius: 6px;
+}
+
+/* Wrapper for the main content sections */
+.mainContainer {
+    display: flex;
+    justify-content: center; /* Center-align mainMiddle */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between mainSide and mainMiddle */
+    padding: 20px;
+}
+
+/* Adjust mainSide styles for the left alignment */
+.mainSide {
+    width: 25%; /* Adjust width as needed */
+    height: 100vh; /* Let height adjust to content */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid ;
+    border-radius: 8px;
+    background-color: inherit;
+    padding: 10px;
+}
+
+.mainSide button{
+    border-radius: 8px;
+    width: 150px;
+    height: 40px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.Bbubbles button{
+    background-color: #1F1F23;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.Bbubbles img{
+    padding-right: 10px;
+    margin-bottom: -3px;
+}
+
+.Iinputs button{
+    background-color: #1F1F23;
+    border: none;
+    color: #ffffff;
+}
+
+.Iinputs img{
+    padding-right: 10px;
+    margin-bottom: -3px;
+
+}
+
+/* Adjust mainMiddle styles for central alignment */
+
+
+.mainMiddle {
+    width: 70%; /* Adjust width as needed */
+    height: 100vh;
+    color: #1F1F23;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    position: relative; /* To manage child positions if needed */
+    gap: 50px; /* Add spacing between the elements */
+}
+
+
+.head {
+    background-color: #1F1F23;
+    color: #ffffff;
+    padding: 15px 20px; /* Add padding for spacing inside */
+    border-radius: 8px;
+    border: none; /* Add border color */
+    width: 330px; /* Make width fit content */
+    height: 45px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for style */
+}
+
+.componentWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a; /* Dark black-like background */
+    padding: 12px; /* Slightly larger padding for a cleaner look */
+    border-radius: 10px; /* Rounded edges for a modern UI */
+    margin-bottom: 30px; /* Space between components */
+    color: #fff; /* White text for contrast */
+    border: 1px solid #333; /* Border to define boundaries */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    gap:8px;
+    position: relative;
+  }
+  
+  .bin{
+    color: red;
+    position: absolute;
+    top:-8px;
+    right: -5px;
+    cursor: pointer;
+  }
+  
+  .componentLabel {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #fff; /* Light gray for less visual dominance */
+  }
+
+  .componentWrapper h5{
+    color: #bbbbbb6e; /* Light gray for less visual dominance */
+    font-size: 10px;
+  }
+  
+  .bubbleInput {
+    padding: 10px;
+    border: 1px solid #444; /* Slightly lighter border */
+    border-radius: 6px;
+    background-color: #2a2a2a; /* Slightly lighter for input distinction */
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .bubbleInput::placeholder {
+    color: #666; /* Dark gray for placeholder text */
+  }
+  
+  .bubbleInput:focus {
+    border-color: #555; /* Slightly lighter border on focus */
+    outline: none;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2); /* Glow effect */
+  }
+  
+  .middleSection{
+    width: 325px;
+  }
+
+
+  
+.lightTheme {
+  --bg-color: #ffffff !important;
+  --text-color: #000000 !important;
+  --button-bg: #007bff !important;
+  --button-text: #ffffff !important;
+}
+
+/* Dark Theme */
+.darkTheme {
+  --bg-color: #121212 !important;
+  --text-color: #ffffff !important;
+  --button-bg: #555555 !important;
+  --button-text: #f0f0f0 !important;
+}
+
+.darkTheme p{
+  color: #fff;
+
+}
+
+.lightTheme p{
+
+  color: #000;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50; /* Green when toggled */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /* Move the slider when toggled */
+}
+
+
+.toggleSwitch {
+  width: 50px;
+  height: 25px;
+  background-color: var(--text-color);
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.switch {
+  width: 23px;
+  height: 23px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.switchOn {
+  transform: translateX(25px);
+  background-color: black; /* Color when switch is off */
+
+}
+
+.switchOff {
+  transform: translateX(0);
+  background-color: white; /* Color when switch is on */
+
+}

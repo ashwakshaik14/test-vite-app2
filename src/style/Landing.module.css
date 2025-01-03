@@ -1,0 +1,184 @@
+/* Reset for the entire document */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Outfit", serif;
+    box-sizing: border-box; /* Ensures padding and borders do not affect the element's width */
+
+  }
+  
+  /* Prevent horizontal scrolling */
+  html, body {
+    height: 100%; /* Ensure body and html take up full height */
+    background-color: black; /* Matches background */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    font-family: "Outfit", serif;
+  }
+  
+  /* Main container layout */
+  .container {
+    display: flex;
+    background-color: black; /* Matches background */
+    flex-direction: column; /* Arranges the navbar and other content vertically */
+    align-items: center; /* Centers the navbar horizontally */
+    width: 100%; /* Full width of the viewport */
+  }
+  
+  /* Navbar layout */
+  .navbar {
+    width: 100%; /* Ensure the navbar does not overflow */
+    max-width: 1200px; /* Optional: limit the navbar width */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  
+  /* Logo styling */
+  .outfitLogo {
+    display: flex;
+    font-weight: 300;
+    justify-content: space-around;
+    width: 13%;
+  }
+  
+  /* Button layout */
+  .btn {
+    width: 24%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Main section layout */
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px;
+    width: 100%;
+    background-color: black; /* Matches background */
+  }
+  
+  /* Picture styling */
+  .pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+  }
+  
+  .pic img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Content section */
+  .content {
+    text-align: center;
+    width: 60%; /* Ensures content section has sufficient width */
+    color: #f8f9fa;
+  }
+  
+  .content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .content button {
+    background-color: #1A5FFF;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .content button:hover {
+    background-color: #7e87ff;
+  }
+  
+  /* Sign-in button */
+  .signIn {
+    background-color: transparent;
+    color: #7EA6FF;
+    border: 2px solid #7EA6FF;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px 22px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .signIn:hover {
+    background-color: #7EA6FF;
+    color: #fff;
+  }
+  
+  /* Create form button */
+  .createForm {
+    background-color: #1A5FFF;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .createForm:hover {
+    background-color: #7e87ff;
+    color: #fff;
+  }
+  
+  /* Gradient text */
+  .gra {
+    background: linear-gradient(90deg, #4B83FF 0%, #B794F4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap; /* Makes it responsive */
+    justify-content: space-evenly; /* Ensures equal spacing */
+    align-items: flex-start; /* Aligns columns at the top */
+    padding: 20px; /* Adds spacing around the footer */
+    background-color: black; /* Matches background */
+    color: #fff; /* White text color */
+  }
+
+  .data1{
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .header1 {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+  .header1,.header2,.header3,.header4{
+    padding-bottom: 10px;
+  }
+
+  a{
+    color: #fff;
+    display: flex;
+    font-weight: 100;
+    padding-bottom: 8px;
+    text-decoration-thickness: 1px; /* Adjust this to make the underline thinner */
+
+  }
+

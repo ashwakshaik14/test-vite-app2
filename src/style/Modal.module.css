@@ -1,0 +1,79 @@
+.html{
+  font-family: "Outfit", serif;
+}
+
+.activeModal {
+    overflow-y: hidden;
+  }
+  
+  /* .btnModal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+  } */
+  
+  .modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+  }
+  
+  .modalContent {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #000000;
+    padding: 40px 60px; /* Increased padding for more space inside */
+    border-radius: 3px;
+    max-width: 900px; /* Increased max-width */
+    min-width: 700px; /* Increased min-width */
+    height: 350px; /* Set a fixed height */
+    max-height: 600px; /* Optional: Max height to prevent overflowing */
+    border-radius: 12px;
+    box-shadow: 2px 2px 5px rgba(145, 139, 139, 0.804); /* Adding box shadow */
+
+    /* border: 1px solid ; */
+    }
+
+    .modalContent button{
+        width: 550px;        
+   }
+   .modalContent input{
+    padding: 10px;
+    margin: 10px;
+   }
+  
+  .closeModal {
+    top:0px;
+    right: -250px;
+    position: absolute;
+    color: red !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .drop{
+    position: absolute;
+    top: 55px;
+    right: 40px;  
+    background-color: #000000;
+    color: #ffff;  
+    }
+
+    .email{
+        border: none;
+        width: 550px;      
+        height: 50px;
+        background-color: #000000;
+        color: #ffff;
+    }

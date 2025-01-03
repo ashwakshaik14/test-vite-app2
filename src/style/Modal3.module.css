@@ -1,0 +1,64 @@
+ .html{
+  font-family: "Outfit", serif;
+ }
+  .modal{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+  }
+  
+  .modalContent {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.8;
+    background: #000000;
+    padding: 40px 60px; /* Increased padding for more space inside */
+    border-radius: 10px;
+    min-width: 400px; /* Increased min-width */
+    height: 250px; /* Set a fixed height */
+    max-height: 400px; /* Optional: Max height to prevent overflowing */
+    border-radius: 12px;
+    color: #ffffff;
+    }
+  
+    .modalContent h2{
+      text-align: center;
+    }
+
+    .buttonGroup{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        font-size: 30px;
+    }
+
+    .confirmButton{
+        border: none;
+        background-color: transparent;
+        color:blue;
+        padding: 0px 50px;
+        cursor: pointer;
+        font-size: 21px;
+    }
+    .confirmButton:hover{
+      background-color: #ffffff !important;
+    }
+    .cancelButton{
+        border: none;
+        background-color: transparent;
+        color:#ffffff;
+        padding: 0px 50px;
+        cursor: pointer;
+        font-size: 21px;
+    }
+    .cancelButton:hover{
+      background-color: red !important;
+    }
+

@@ -1,0 +1,232 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Login Container */
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 1rem;  /* Added some padding to give the form space from the edges */
+}
+
+/* Adjusted Login Form */
+.loginForm {
+    padding: 1.5rem;  /* Reduced padding to make it more compact */
+    border-radius: 8px;  /* Slightly smaller border radius */
+    width: 100%;  /* Full width of the parent container */
+    max-width: 350px;  /* Reduced maximum width */
+    text-align: center;
+}
+
+/* Adjusted Input fields */
+.loginForm input {
+    background-color: #121212;
+    width: 100%;
+    padding: 0.6rem;  /* Reduced padding inside the inputs */
+    margin-bottom: 1rem;  /* Reduced space between inputs */
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;  /* Slightly smaller border radius */
+    color: #fff;
+    font-size: 0.9rem;  /* Reduced font size for a more compact look */
+}
+
+.loginForm label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+
+.loginButton {
+    background-color: #1A5FFF;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+    background-color: #0056b3;
+}
+
+/* OR Separator */
+.orSeparator {
+    color: #fff;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+}
+
+/* Google Button */
+.googleButton {
+    background-color: #1A5FFF;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.googleButton:hover {
+    background-color: #0056b3;
+
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px; /* Adjust size */
+    height: 30px; /* Adjust size */
+    margin-right: 8px; /* Add space between the icon and text */
+    font-size: large;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+}
+
+
+
+/* Register Text */
+.registerText {
+    display: flex;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+
+}
+
+.registerText a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.registerText a:hover {
+    text-decoration: underline;
+}
+
+.left2 {
+    position: absolute; /* Keeps the image in a fixed location relative to the container */
+    top: 20%; /* Adjust as needed */
+    left: 2%; /* Adjust as needed */
+    z-index: 1; /* Keeps it below other elements if necessary */
+}
+
+.bottom2 {
+    position: absolute;
+    bottom: 0%; /* Adjust as needed */
+    right: 25%; /* Adjust as needed */
+    z-index: 1;
+}
+
+.right2 {
+    position: absolute;
+    top: 20%; /* Adjust as needed */
+    right: 0%; /* Adjust as needed */
+    z-index: 1;
+}
+
+.back {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    font-size: 1.2rem;  /* Slightly reduced font size */
+    cursor: pointer;
+}
+
+/* Adjusted Login Container */
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 1rem;  /* Added some padding to give the form space from the edges */
+}
+
+/* Adjusted Login Form */
+.loginForm {
+    padding: 1.5rem;  /* Reduced padding to make it more compact */
+    border-radius: 8px;  /* Slightly smaller border radius */
+    width: 100%;  /* Full width of the parent container */
+    max-width: 350px;  /* Reduced maximum width */
+    text-align: center;
+}
+
+/* Adjusted Input fields */
+.loginForm input {
+    background-color: #121212;
+    width: 100%;
+    padding: 0.6rem;  /* Reduced padding inside the inputs */
+    margin-bottom: 1rem;  /* Reduced space between inputs */
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;  /* Slightly smaller border radius */
+    color: #fff;
+    font-size: 0.9rem;  /* Reduced font size for a more compact look */
+}
+
+/* Adjusted Buttons */
+.loginButton, .googleButton {
+    padding: 0.7rem;  /* Reduced padding */
+    font-size: 0.9rem;  /* Slightly smaller font size */
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Adjusted Register Text */
+.registerText {
+    margin-top: 1rem;  /* Reduced top margin */
+    font-size: 0.85rem;  /* Reduced font size */
+}
+
+.left2, .bottom2, .right2 {
+    position: absolute;
+    z-index: 1;
+}
+
+/* Adjust back button position */
+.back {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    font-size: 1.2rem;  /* Slightly reduced font size */
+    cursor: pointer;
+}
+
+.ch{
+    background-color: #121212;
+}

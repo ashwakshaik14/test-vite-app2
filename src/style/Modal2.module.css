@@ -1,0 +1,81 @@
+.html{
+  font-family: "Outfit", serif;
+}
+
+.activeModal {
+    overflow-y: hidden;
+  }
+  
+  .modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+  }
+  
+  .modalContent {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 2.2;
+    background: #000000;
+    padding: 40px 60px; /* Increased padding for more space inside */
+    border-radius: 10px;
+    max-width: 900px; /* Increased max-width */
+    min-width: 450px; /* Increased min-width */
+    height: 250px; /* Set a fixed height */
+    max-height: 400px; /* Optional: Max height to prevent overflowing */
+    border-radius: 12px;
+    color: #ffffff;
+    }
+  
+ 
+    .modalContent input{
+        width:300px;
+        height: 40px;
+        background-color: #272525;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        margin-top: 15px;
+    }
+
+    .modalContent ::-webkit-input-placeholder{
+        padding-left: 20px;
+    }
+
+    .cc{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        font-size: 30px;
+    }
+
+    .create{
+        border: none;
+        background-color: transparent;
+        color:blue;
+        padding: 0px 50px;
+        cursor: pointer;
+        font-size: 21px;
+    }
+    .create:hover{
+      background-color: #ffffff ;
+    }
+    .cancel{
+        border: none;
+        background-color: transparent;
+        color:#ffffff;
+        padding: 0px 50px;
+        cursor: pointer;
+        font-size: 21px;
+    }
+    .cancel:hover{
+      background-color: red;
+    }
+
