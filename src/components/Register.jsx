@@ -295,7 +295,7 @@ function Register() {
 
     try {
       const response = await register({
-        name: formData.Username,  // Ensure `name` is passed correctly
+        name: formData.name,  // Ensure `name` is passed correctly
         email: formData.email,
         password: formData.password,
       });
